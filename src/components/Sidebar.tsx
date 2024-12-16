@@ -6,8 +6,11 @@ import SidebarChannel from './SidebarChannel';
 import MicIcon from '@mui/icons-material/Mic';
 import HeadphonesIcon from '@mui/icons-material/Headphones';
 import SettingsIcon from '@mui/icons-material/Settings';
+import { auth } from '../firebase';
+import { useAppSelector } from '../app/hooks';
 
 function Sidebar() {
+    const user = useAppSelector((state) => state.user);
   return (
     <div>
       <div className='sidebar'>
@@ -46,10 +49,10 @@ function Sidebar() {
 
                 <div className='sidebarFooter'>
                     <div className='sidebarAccount'>
-                        <img src="./shiba_brown.png" alt=""></img>
+                        <img src={user?.photo} onClick={() => auth.signOut()} alt=""></img>
                         <div className='accountName'>
-                            <h4>Haru</h4>
-                            <span>fte9tg8</span>
+                            <h4>{user?.displayName}</h4>
+                            <span>#{user?.uid.substring(0,4)}</span>
                         </div>
                     </div>
 

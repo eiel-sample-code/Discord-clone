@@ -12,7 +12,7 @@ function ChatHeader() {
     <div className='chatHeader'>
         <div className='chatHeaderLeft'>
             <h3>
-                <span className='chaHeaderHash'>#</span>
+                <span className='chatHeaderHash'>#</span>
                 Udemy
             </h3>
         </div>
