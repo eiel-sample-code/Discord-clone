@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { onSnapshot, collection, DocumentData, query, CollectionReference, Query } from 'firebase/firestore';
-import { db } from "../firebase"
+import { db } from "../firebase.ts"
 
 interface Channels {
     id:string;

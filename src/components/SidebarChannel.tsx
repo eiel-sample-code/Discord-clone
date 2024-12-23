@@ -1,8 +1,8 @@
 import React from 'react'
 import "./SidebarChannel.scss"
 import { DocumentData } from 'firebase/firestore';
-import { useAppDispatch } from '../app/hooks';
-import { setChannelInfo } from '../features/channelSlice';
+import { useAppDispatch } from '../app/hooks.ts';
+import { setChannelInfo } from '../features/channelSlice.tsx';
 
 type Props = {
   id: string;

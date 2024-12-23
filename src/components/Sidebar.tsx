@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import "./Sidebar.scss"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AddIcon from '@mui/icons-material/Add';
-import SidebarChannel from './SidebarChannel';
+import SidebarChannel from './SidebarChannel.tsx';
 import MicIcon from '@mui/icons-material/Mic';
 import HeadphonesIcon from '@mui/icons-material/Headphones';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { auth, db } from '../firebase';
-import { useAppSelector } from '../app/hooks';
-import useCollection from '../hooks/useCollection';
+import { auth, db } from '../firebase.ts';
+import { useAppSelector } from '../app/hooks.ts';
+import useCollection from '../hooks/useCollection.tsx';
 import { addDoc, collection } from 'firebase/firestore';
 
 

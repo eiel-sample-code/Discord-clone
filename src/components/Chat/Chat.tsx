@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import './Chat.scss'
-import ChatHeader from './ChatHeader'
+import ChatHeader from './ChatHeader.tsx'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import GifIcon from '@mui/icons-material/Gif';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
-import ChatMessage from './ChatMessage';
-import { useAppSelector } from '../../app/hooks';
+import ChatMessage from './ChatMessage.tsx';
+import { useAppSelector } from '../../app/hooks.ts';
 import { collection, CollectionReference,DocumentData, DocumentReference, serverTimestamp,addDoc } from "firebase/firestore";
-import { db } from "../../firebase";
+import { db } from "../../firebase.ts";
 
 function Chat() {
   const [inputText, setInputText] = useState<string>("");

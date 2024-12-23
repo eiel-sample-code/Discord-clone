@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import './App.scss';
-import Sidebar from './components/Sidebar';
-import Chat from './components/Chat/Chat';
+import Sidebar from './components/Sidebar.tsx';
+import Chat from './components/Chat/Chat.tsx';
 import { useSelector } from 'react-redux';
-import Login from './components/login/Login';
-import { useAppDispatch, useAppSelector } from './app/hooks';
-import { auth } from './firebase';
-import { login, logout } from './features/userSlice';
+import Login from './components/login/Login.tsx';
+import { useAppDispatch, useAppSelector } from './app/hooks.ts';
+import { auth } from './firebase.ts';
+import { login, logout } from './features/userSlice.ts';
 import { ErrorBoundary } from 'react-error-boundary';
-import { ErrorFallback } from './utils/ErrorFallBack';
+import { ErrorFallback } from './utils/ErrorFallBack.tsx';
 
 
 function App() {

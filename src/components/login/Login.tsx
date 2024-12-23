@@ -2,7 +2,7 @@ import React from 'react';
 import "./Login.scss";
 import { Button } from "@mui/material";
 import { signInWithPopup } from "firebase/auth";
-import { auth, provider } from "../../firebase";
+import { auth, provider } from "../../firebase.ts";
 
 function Login() {
 
